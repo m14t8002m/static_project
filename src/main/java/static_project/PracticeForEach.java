@@ -17,8 +17,8 @@ public class PracticeForEach {
 				"山田"
 		};
 
-		for (int i = 0; i < list.length; i++) {
-			System.out.println(list[i]);
+		for (String listData : list) {
+			System.out.println(listData);
 		}
 	}
 }

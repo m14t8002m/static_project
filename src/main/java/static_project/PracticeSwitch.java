@@ -1,33 +1,39 @@
 package static_project;
 
+import java.util.Random;
+
 public class PracticeSwitch {
 	public static void main(String[] args) {
 
-		int[] arrayId = new int[5];
-		String[] arrayJob = new String[5];
+		int jobNumsLength = 10;
+		int[] jobNums = new int[jobNumsLength];
 
-		for (int i = 1; i <= 5; i++) {
-			arrayId[i - 1] = i;
-			switch (i) {
+		Random random = new Random();
+		int randomRange = 5;
+
+		for (int i = 0; i < jobNumsLength; i++) {
+			int randomNum = random.nextInt(randomRange) + 1;
+			jobNums[i] = randomNum;
+		}
+
+		for (int jobData : jobNums) {
+			switch (jobData) {
 			case 1:
-				arrayJob[i - 1] = "勇者";
+				System.out.println("勇者");
 				break;
 			case 2:
-				arrayJob[i - 1] = "バトルマスター";
+				System.out.println("バトルマスター");
 				break;
 			case 3:
-				arrayJob[i - 1] = "パラディン";
+				System.out.println("パラディン");
 				break;
 			case 4:
-				arrayJob[i - 1] = "海賊";
+				System.out.println("海賊");
 				break;
 			case 5:
-				arrayJob[i - 1] = "魔法剣士";
+				System.out.println("魔法剣士");
 				break;
 			}
-		}
-		for (int i = 0; i < arrayId.length; i++) {
-			System.out.println(arrayId[i] + ":" + arrayJob[i]);
 		}
 	}
 }
